@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+**/dist/
+build/
+.turbo/
+*.tsbuildinfo
+
+# Logs
+*.log
+build_log*
+core_build*
+react_build*
+
+# Environment / Secrets
+.env
+.env.local
+.env.*.local
+.npmrc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Diagnostic
+tsconfig.tsbuildinfo

@@ -1,0 +1,40 @@
+{
+  "name": "@anonfly/sdk",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Core SDK logic for Anonfly service",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build:tsup": "tsup src/index.ts --format cjs,esm --clean",
+    "build:types": "tsc -p tsconfig.dts.json",
+    "build": "pnpm run build:tsup && pnpm run build:types",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "cross-fetch": "^4.0.0",
+    "events": "^3.3.0",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "vitest": "^1.2.0",
+    "@types/ws": "^8.5.10"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

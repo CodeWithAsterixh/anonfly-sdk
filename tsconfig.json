@@ -1,0 +1,53 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
+        "strict": true,
+        "jsx": "preserve",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
+        "composite": true,
+        "baseUrl": ".",
+        "paths": {
+            "@anonfly/sdk": [
+                "packages/core"
+            ],
+            "@anonfly/sdk/*": [
+                "packages/core/*"
+            ],
+            "@anonfly/react": [
+                "packages/react"
+            ],
+            "@anonfly/react/*": [
+                "packages/react/*"
+            ],
+            "@anonfly/shared": [
+                "packages/shared"
+            ],
+            "@anonfly/shared/*": [
+                "packages/shared/*"
+            ]
+        }
+    },
+    "include": [],
+    "references": [
+        {
+            "path": "./packages/core"
+        },
+        {
+            "path": "./packages/react"
+        },
+        {
+            "path": "./examples/vite-react"
+        }
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}
