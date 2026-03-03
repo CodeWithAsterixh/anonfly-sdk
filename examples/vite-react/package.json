@@ -10,7 +10,7 @@
     },
     "dependencies": {
         "@anonfly/react": "workspace:*",
-        "@anonfly/sdk": "^1.0.0",
+        "@anonfly/sdk": "workspace:*",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     },
