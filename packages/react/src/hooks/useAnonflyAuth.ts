@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback } from 'react';
 import { useAnonfly } from '../context/AnonflyContext';
 import { AuthSession } from '@anonfly/sdk';
 
