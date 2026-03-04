@@ -17,7 +17,7 @@
     "dev": "tsup src/index.ts --format cjs,esm --watch --dts --external react"
   },
   "dependencies": {
-    "@anonfly/sdk": "workspace:*",
+    "@anonfly/sdk": "0.0.0",
     "lucide-react": "^0.300.0",
     "clsx": "^2.1.0",
     "tailwind-merge": "^2.2.0"
