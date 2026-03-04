@@ -1,6 +1,6 @@
 {
   "name": "@anonfly/sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "description": "Core SDK logic for Anonfly service",
   "main": "./dist/index.cjs",

@@ -1,6 +1,6 @@
 {
   "name": "@anonfly/react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "description": "React UI components for Anonfly SDK",
   "main": "./dist/index.cjs",
