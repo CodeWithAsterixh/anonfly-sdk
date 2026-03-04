@@ -28,6 +28,13 @@ export class WebSocketClient extends EventEmitter {
             try {
                 const message = JSON.parse(data.toString());
                 this.emit('message', message);
+
+                // If message has a topic/roomID, emit to that topic as well
+                if (message.topic) {
+                    this.emit(message.topic, message);
+                } else if (message.chatroomId) {
+                    this.emit(`room:${message.chatroomId}`, message);
+                }
             } catch {
                 this.emit('message', data.toString());
             }
@@ -57,6 +64,14 @@ export class WebSocketClient extends EventEmitter {
         } else {
             throw new Error('WebSocket is not connected');
         }
+    }
+
+    subscribe(topic: string, handler: (data: any) => void) {
+        this.on(topic, handler);
+    }
+
+    unsubscribe(topic: string, handler: (data: any) => void) {
+        this.off(topic, handler);
     }
 
     disconnect() {
