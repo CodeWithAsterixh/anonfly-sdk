@@ -1,6 +1,6 @@
 {
   "name": "@anonfly/react",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "type": "module",
   "description": "React UI components for Anonfly SDK",
   "main": "./dist/index.cjs",
@@ -17,22 +17,22 @@
     "dev": "tsup src/index.ts --format cjs,esm --watch --dts --external react"
   },
   "dependencies": {
-    "@anonfly/sdk": "0.0.0",
-    "lucide-react": "^0.300.0",
-    "clsx": "^2.1.0",
-    "tailwind-merge": "^2.2.0"
+    "@anonfly/sdk": "^1.0.1",
+    "lucide-react": "^0.473.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.0.1"
   },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
   },
   "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "tsup": "^8.0.0",
-    "typescript": "^5.0.0"
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
   },
   "publishConfig": {
     "access": "public"
