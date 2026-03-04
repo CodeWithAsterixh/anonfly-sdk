@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useMessages } from '../hooks/useMessages.js';
+import { useAnonflyMessages } from '../hooks/useAnonflyMessages';
 import { Send } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -15,7 +15,7 @@ export interface ChatInputProps {
 }
 
 export const ChatInput: React.FC<ChatInputProps> = ({ roomId, className, placeholder = "Type a message..." }) => {
-    const { sendMessage } = useMessages(roomId);
+    const { sendMessage } = useAnonflyMessages(roomId);
     const [content, setContent] = useState('');
     const [sending, setSending] = useState(false);
 

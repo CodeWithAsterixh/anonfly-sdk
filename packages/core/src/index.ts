@@ -4,6 +4,7 @@ import { WebSocketClient } from './core/transport/WebSocketClient';
 import { retryMiddleware } from './core/transport/retryMiddleware';
 import { RoomsResource } from './resources/RoomsResource';
 import { MessagesResource } from './resources/MessagesResource';
+import { AdminResource } from './resources/AdminResource';
 
 export * from './types/index';
 export * from './core/errors/AnonflyError';
@@ -13,6 +14,7 @@ export * from './core/transport/retryMiddleware';
 export * from './resources/RoomsResource';
 export * from './resources/MessagesResource';
 export * from './resources/AuthResource';
+export * from './resources/AdminResource';
 
 export interface AnonflyConfig {
     apiKey: string;
@@ -25,7 +27,7 @@ export class Anonfly {
     public http: HttpClient;
     public ws?: WebSocketClient;
 
-    constructor(private config: AnonflyConfig) {
+    constructor(private readonly config: AnonflyConfig) {
         this.http = new HttpClient({
             baseUrl: this.config.baseUrl,
             headers: {
@@ -55,5 +57,9 @@ export class Anonfly {
 
     public get auth() {
         return new AuthResource(this.http);
+    }
+
+    public get admin() {
+        return new AdminResource(this.http);
     }
 }

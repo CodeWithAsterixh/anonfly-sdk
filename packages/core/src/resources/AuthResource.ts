@@ -1,28 +1,41 @@
 import { HttpClient } from '../core/transport/HttpClient.js';
+import { PremiumStatus } from '../types/index.js';
 
 export interface VerifyIdentityInput {
-    aid: string;
+    challenge: string;
     signature: string;
-    username: string;
-    publicKey: string;
-    exchangePublicKey: string;
+    identity: {
+        aid: string;
+        username: string;
+        publicKey: string;
+        exchangePublicKey: string;
+    };
 }
 
 export interface AuthSession {
     token: string;
-    aid: string;
-    username: string;
     identityId: string;
+    identityAid: string;
+    username: string;
+    isPremium: boolean;
+    allowedFeatures: string[];
 }
 
 export class AuthResource {
-    constructor(private http: HttpClient) { }
+    constructor(private readonly http: HttpClient) { }
 
     async generateChallenge(aid: string): Promise<{ nonce: string }> {
-        return this.http.post('/auth/challenge', { aid });
+        const response = await this.http.post('/auth/challenge', { aid });
+        return response.data;
     }
 
     async verify(input: VerifyIdentityInput): Promise<AuthSession> {
-        return this.http.post('/auth/verify', input);
+        const response = await this.http.post('/auth/verify', input);
+        return response.data;
+    }
+
+    async getPremiumStatus(): Promise<PremiumStatus> {
+        const response = await this.http.get('/auth/premium-status');
+        return response.data;
     }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMessages } from '../hooks/useMessages.js';
+import { useAnonflyMessages } from '../hooks/useAnonflyMessages';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -13,7 +13,7 @@ export interface MessageListProps {
 }
 
 export const MessageList: React.FC<MessageListProps> = ({ roomId, className }) => {
-    const { messages, loading, error } = useMessages(roomId);
+    const { messages, loading, error } = useAnonflyMessages(roomId);
 
     if (loading && messages.length === 0) {
         return <div className="p-4 text-center opacity-50">Loading messages...</div>;
