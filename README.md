@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/logo.png" width="128" />
+  <img src="https://raw.githubusercontent.com/codewithasterixh/anonflyclient/main/public/logo.png" width="128" />
 </p>
 
 # Anonfly SDK

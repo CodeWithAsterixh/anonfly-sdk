@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../../docs/images/logo.png" width="96" />
+  <img src="https://raw.githubusercontent.com/codewithasterixh/anonflyclient/main/public/logo.png" width="96" />
 </p>
 
 # @anonfly/react
