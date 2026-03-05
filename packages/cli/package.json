@@ -1,6 +1,6 @@
 {
     "name": "@anonfly/cli",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Anonfly Command Line Interface",
     "type": "module",
     "bin": {

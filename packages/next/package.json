@@ -1,6 +1,6 @@
 {
     "name": "@anonfly/next",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Anonfly Next.js Proxy Wrapper for secure API interactions",
     "type": "module",
     "main": "./dist/index.js",
@@ -27,7 +27,7 @@
     "peerDependencies": {
         "next": ">=13.0.0",
         "react": ">=18.0.0",
-        "@anonfly/sdk": "workspace:*"
+        "@anonfly/sdk": "^1.0.4"
     },
     "devDependencies": {
         "next": "^14.1.0",
