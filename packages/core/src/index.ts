@@ -16,20 +16,26 @@ export * from './resources/MessagesResource';
 export * from './resources/AuthResource';
 export * from './resources/AdminResource';
 
+export const DEFAULT_BASE_URL = 'https://api.anonfly.com/v1';
+export const DEFAULT_WS_URL = 'wss://api.anonfly.com/v1';
+
 export interface AnonflyConfig {
     apiKey: string;
-    baseUrl: string;
+    baseUrl?: string;
     wsUrl?: string;
     retries?: number;
 }
 
 export class Anonfly {
     public http: HttpClient;
-    public ws?: WebSocketClient;
+    public ws: WebSocketClient;
 
-    constructor(private readonly config: AnonflyConfig) {
+    constructor(public readonly config: AnonflyConfig) {
+        const baseUrl = this.config.baseUrl || DEFAULT_BASE_URL;
+        const wsUrl = this.config.wsUrl || DEFAULT_WS_URL;
+
         this.http = new HttpClient({
-            baseUrl: this.config.baseUrl,
+            baseUrl,
             headers: {
                 'X-API-Key': this.config.apiKey,
             },
@@ -39,12 +45,10 @@ export class Anonfly {
             this.http.use(retryMiddleware({ maxRetries: this.config.retries }));
         }
 
-        if (this.config.wsUrl) {
-            this.ws = new WebSocketClient({
-                url: this.config.wsUrl,
-                reconnect: true,
-            });
-        }
+        this.ws = new WebSocketClient({
+            url: wsUrl,
+            reconnect: true,
+        });
     }
 
     public get rooms() {

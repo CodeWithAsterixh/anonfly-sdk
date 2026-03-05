@@ -30,6 +30,10 @@ export class RoomsResource {
         return response.data;
     }
 
+    async delete(id: string): Promise<void> {
+        return this.http.delete(`/chatrooms/${id}`);
+    }
+
     subscribeToPublicList(onUpdate: (rooms: Room[]) => void, region?: string): Promise<() => void> {
         const regionParam = region ? `&region=${region}` : '';
         const path = `/chatrooms?sse=true${regionParam}`;

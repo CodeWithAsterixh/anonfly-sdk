@@ -1,0 +1,41 @@
+{
+    "name": "@anonfly/next",
+    "version": "1.0.0",
+    "description": "Anonfly Next.js Proxy Wrapper for secure API interactions",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup src/index.ts --format esm --clean --dts",
+        "dev": "tsup src/index.ts --format esm --watch --dts",
+        "lint": "eslint src --ext .ts",
+        "test": "vitest run"
+    },
+    "keywords": [
+        "anonfly",
+        "nextjs",
+        "proxy",
+        "privacy",
+        "security"
+    ],
+    "author": "Anonfly Team",
+    "license": "MIT",
+    "peerDependencies": {
+        "next": ">=13.0.0",
+        "react": ">=18.0.0",
+        "@anonfly/sdk": "workspace:*"
+    },
+    "devDependencies": {
+        "next": "^14.1.0",
+        "react": "^18.2.0",
+        "@anonfly/sdk": "workspace:*",
+        "tsup": "^8.0.2",
+        "typescript": "^5.3.3",
+        "@types/node": "^20.11.24",
+        "@types/react": "^18.2.61"
+    }
+}

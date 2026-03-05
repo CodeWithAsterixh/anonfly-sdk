@@ -16,7 +16,7 @@
     "test": "turbo run test --filter=@anonfly/*",
     "lint": "turbo run lint --filter=@anonfly/*",
     "format": "prettier --write \"packages/**/*.{ts,tsx}\"",
-    "publish:packages": "cd packages/core && npm publish --access public && cd ../react && npm publish --access public"
+    "publish:packages": "cd packages/core && npm publish --access public && cd ../react && npm publish --access public && cd ../cli && npm publish --access public && cd ../next && npm publish --access public"
   },
   "devDependencies": {
     "@types/node": "^25.3.3",
