@@ -65,7 +65,7 @@ export const init = async () => {
             } else {
                 let content = fs.readFileSync(src, 'utf8');
                 if (path.basename(src) === 'package.json') {
-                    content = content.replace('{{name}}', answers.name);
+                    content = content.replace('anonfly-project-placeholder', answers.name);
                 }
                 fs.writeFileSync(dest, content);
             }

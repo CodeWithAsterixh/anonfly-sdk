@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "composite": true,
+        "skipLibCheck": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
+        "paths": {
+            "vite": [
+                "../../../../../examples/vite-react/node_modules/vite"
+            ],
+            "@vitejs/plugin-react": [
+                "../../../../../examples/vite-react/node_modules/@vitejs/plugin-react"
+            ]
+        }
+    },
+    "include": [
+        "vite.config.ts"
+    ]
+}

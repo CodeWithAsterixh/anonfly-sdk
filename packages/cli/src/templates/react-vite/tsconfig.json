@@ -1,0 +1,50 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",
+        "useDefineForClassFields": true,
+        "lib": [
+            "ES2020",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        /* Path mapping for monorepo development */
+        /* These will be ignored by npm consumers as they are usually for local development */
+        "baseUrl": ".",
+        "paths": {
+            "@anonfly/sdk": [
+                "../../../../core/src"
+            ],
+            "@anonfly/react": [
+                "../../../../react/src"
+            ],
+            "vite": [
+                "../../../../../examples/vite-react/node_modules/vite"
+            ],
+            "@vitejs/plugin-react": [
+                "../../../../../examples/vite-react/node_modules/@vitejs/plugin-react"
+            ]
+        }
+    },
+    "include": [
+        "src"
+    ],
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ]
+}
