@@ -15,6 +15,8 @@ export * from './resources/RoomsResource';
 export * from './resources/MessagesResource';
 export * from './resources/AuthResource';
 export * from './resources/AdminResource';
+export * from './crypto/encryption';
+export * from './network/WSClient';
 
 export const DEFAULT_BASE_URL = 'https://api.anonfly.com/v1';
 export const DEFAULT_WS_URL = 'wss://api.anonfly.com/v1';

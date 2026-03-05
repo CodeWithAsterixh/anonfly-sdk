@@ -1,6 +1,6 @@
 {
   "name": "@anonfly/react",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "type": "module",
   "description": "React UI components for Anonfly SDK",
   "main": "./dist/index.cjs",
@@ -17,9 +17,9 @@
     "dev": "tsup src/index.ts --format cjs,esm --watch --dts --external react"
   },
   "dependencies": {
-    "@anonfly/sdk": "^1.0.4",
-    "lucide-react": "^0.473.0",
+    "@anonfly/sdk": "^1.0.6",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.473.0",
     "tailwind-merge": "^3.0.1"
   },
   "peerDependencies": {

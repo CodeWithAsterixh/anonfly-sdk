@@ -69,9 +69,12 @@ importers:
 
   packages/cli:
     dependencies:
+      '@anonfly/react':
+        specifier: ^1.0.3
+        version: 1.0.4(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@anonfly/sdk':
-        specifier: workspace:*
-        version: link:../core
+        specifier: '^1.0.4 '
+        version: 1.0.4
       chalk:
         specifier: ^5.3.0
         version: 5.6.2
@@ -156,8 +159,8 @@ importers:
   packages/react:
     dependencies:
       '@anonfly/sdk':
-        specifier: ^1.0.4
-        version: 1.0.4
+        specifier: ^1.0.6
+        version: 1.0.6
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -189,8 +192,17 @@ importers:
 
 packages:
 
+  '@anonfly/react@1.0.4':
+    resolution: {integrity: sha512-tHd8Lmx17yzRP+VHicHWZ2qpyhHT9LNhzAcRHjn5KYmjDNustI924yxqdNyHi1RuQGZNJvwIuP8WevMHPAusGg==}
+    peerDependencies:
+      react: '>=18'
+      react-dom: '>=18'
+
   '@anonfly/sdk@1.0.4':
     resolution: {integrity: sha512-r/mPGNUMrbT4VTNDrMglG+QfimUrwqjfzN1FYfEo2lItcmNEdLzxQbKLAqjmFEi6uT6xhwv0qhwjVKJN4OyUAg==}
+
+  '@anonfly/sdk@1.0.6':
+    resolution: {integrity: sha512-tFgmcvLwuK+yybWmKaFwxo+GauX88OltD24tBx/nDlCIh7uU0Ea7lw8kbzQKxte34AXJ6WjPyoMfK3Sa+S5JJA==}
 
   '@babel/code-frame@7.29.0':
     resolution: {integrity: sha512-9NhCeYjq9+3uxgdtp20LSiJXJvN0FeCtNGpJxuMFZ1Kv3cWUNb6DOhJwUvcVCzKGR66cw4njwM6hrJLqgOwbcw==}
@@ -2499,7 +2511,30 @@ packages:
 
 snapshots:
 
+  '@anonfly/react@1.0.4(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@anonfly/sdk': 1.0.4
+      clsx: 2.1.1
+      lucide-react: 0.473.0(react@19.2.4)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+      tailwind-merge: 3.5.0
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - utf-8-validate
+
   '@anonfly/sdk@1.0.4':
+    dependencies:
+      cross-fetch: 4.1.0
+      events: 3.3.0
+      ws: 8.19.0
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - utf-8-validate
+
+  '@anonfly/sdk@1.0.6':
     dependencies:
       cross-fetch: 4.1.0
       events: 3.3.0

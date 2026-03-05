@@ -1,6 +1,6 @@
 {
     "name": "@anonfly/next",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "description": "Anonfly Next.js Proxy Wrapper for secure API interactions",
     "type": "module",
     "main": "./dist/index.js",
