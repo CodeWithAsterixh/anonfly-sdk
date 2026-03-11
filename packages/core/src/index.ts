@@ -17,6 +17,7 @@ export * from './resources/AuthResource';
 export * from './resources/AdminResource';
 export * from './crypto/encryption';
 export * from './network/WSClient';
+export * as identity from './identity/identityManager';
 
 export const DEFAULT_BASE_URL = 'https://api.anonfly.com/v1';
 export const DEFAULT_WS_URL = 'wss://api.anonfly.com/v1';
